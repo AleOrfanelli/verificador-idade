@@ -1,8 +1,11 @@
+var txtano = document.getElementById('txtano')
+var result = document.getElementById('resultado')
+var img = document.getElementById('imagem')
+
 function verificar() {
     var data = new Date()
     var ano = data.getFullYear()
-    var txtano = document.getElementById('txtano')
-    var result = document.getElementById('resultado')
+
 
     if (txtano.value.length == 0 || Number(txtano.value) > ano || Number(txtano.value) < 1900) {
         window.alert('[ERRO] Verifique os dados e tente novamente!')
@@ -10,7 +13,7 @@ function verificar() {
         var txtsex = document.getElementsByName('txtsex')
         var idade = ano - Number(txtano.value)
         var genero = ''
-        var img = document.getElementById('imagem')
+
         if (txtsex[0].checked) {
             genero = 'Homem'
             if (idade > 0 && idade < 10) {
@@ -46,3 +49,9 @@ function verificar() {
         result.innerHTML = ` <p>${genero} com ${idade} anos!</p>`
     }
 }
+
+function limpar() {
+    img.src = 'Preencha os requisitos acima para obter o resultado!'
+    result.innerHTML = ''
+}
+

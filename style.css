@@ -41,6 +41,12 @@ form {
     font-size: 18px;
 }
 
+.botao {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
 #btn-verif {
     cursor: pointer;
     width: 100px;
@@ -55,4 +61,37 @@ form {
 
 #imagem {
     border-radius: 50%;
+}
+
+@media (max-width: 605px) {
+    form {
+        width: 450px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .nome {
+        transform: translateY(-20px);
+    }
+
+}
+
+@media (max-width: 465px) {
+    form {
+        width: 300px;
+    }
+
+    h1 {
+        transform: translateY(30px);
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .botao {
+        width: 80%;
+    }
 }
